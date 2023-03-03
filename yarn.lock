@@ -391,6 +391,11 @@
     lodash.merge "^4.6.2"
     postcss-selector-parser "6.0.10"
 
+"@types/lodash@^4.14.191":
+  version "4.14.191"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.191.tgz#09511e7f7cba275acd8b419ddac8da9a6a79e2fa"
+  integrity sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==
+
 "@types/node@^18.14.5":
   version "18.14.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.5.tgz#4a13a6445862159303fc38586598a9396fc408b3"
@@ -601,6 +606,11 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
+connect-history-api-fallback@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/connect-history-api-fallback/-/connect-history-api-fallback-1.6.0.tgz#8b32089359308d111115d81cad3fceab888f97bc"
+  integrity sha512-e54B99q/OUoH64zYYRf3HBP5z24G38h5D3qXu23JGRoigpX5Ss4r9ZnDk3g0Z8uQC2x2lPaJ+UlWBc1ZWBWdLg==
+
 convert-source-map@^1.7.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.9.0.tgz#7faae62353fb4213366d0ca98358d22e8368b05f"
@@ -634,7 +644,7 @@ daisyui@^2.51.3:
     postcss-js "^4.0.0"
     tailwindcss "^3"
 
-debug@^4.1.0:
+debug@^4.1.0, debug@^4.1.1:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -796,6 +806,11 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
+globrex@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/globrex/-/globrex-0.1.2.tgz#dd5d9ec826232730cd6793a5e33a9302985e6098"
+  integrity sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -878,6 +893,11 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.1.0:
   version "1.4.0"
@@ -1195,6 +1215,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+tsconfck@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/tsconfck/-/tsconfck-2.0.3.tgz#47b79fc6be3c5ec6ec9b3862d1c959e85038b117"
+  integrity sha512-o3DsPZO1+C98KqHMdAbWs30zpxD30kj8r9OLA4ML1yghx4khNDzaaShNalfluh8ZPPhzKe3qyVCP1HiZszSAsw==
+
 typescript@^4.9.3:
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
@@ -1217,6 +1242,22 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+vite-plugin-rewrite-all@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-rewrite-all/-/vite-plugin-rewrite-all-1.0.1.tgz#ee711a3d114634abb922a0e50e56736d7e9a324a"
+  integrity sha512-W0DAchC8ynuQH0lYLIu5/5+JGfYlUTRD8GGNtHFXRJX4FzzB9MajtqHBp26zq/ly9sDt5BqrfdT08rv3RbB0LQ==
+  dependencies:
+    connect-history-api-fallback "^1.6.0"
+
+vite-tsconfig-paths@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/vite-tsconfig-paths/-/vite-tsconfig-paths-4.0.5.tgz#c7c54e2cf7ccc5e600db565cecd7b368a1fa8889"
+  integrity sha512-/L/eHwySFYjwxoYt1WRJniuK/jPv+WGwgRGBYx3leciR5wBeqntQpUE6Js6+TJemChc+ter7fDBKieyEWDx4yQ==
+  dependencies:
+    debug "^4.1.1"
+    globrex "^0.1.2"
+    tsconfck "^2.0.1"
 
 vite@^4.1.0:
   version "4.1.4"
