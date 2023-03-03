@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "extends": "@react-native-community",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "rules": {
+        "semi": "off",
+        "curly": "off",
+        "no-dupe-class-members": "off",
+        "no-undef": "off",
+        "no-shadow": "off"
+      }
+    }
+  ]
+}
