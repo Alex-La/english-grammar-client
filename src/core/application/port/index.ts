@@ -1,1 +1,1 @@
-export * from './IrregularVerbPorts'
+export * from './IrregularVerbsStore'
