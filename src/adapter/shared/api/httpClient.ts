@@ -1,20 +1,27 @@
 import axios from 'axios'
 
-import {API_URL, RequestEnum} from './config'
+import {API_URL} from './config'
 import {requestDictionary} from './requestDictionary'
-import {RequestVariables} from './types'
+import {RequestBuilder} from './types'
 
-export class HttpClient {
+class HttpClient {
   private readonly clientInstance = axios.create({baseURL: API_URL})
 
-  public async get<D = any, V = RequestVariables>(request: RequestEnum, variables?: V): PromiseMaybe<D> {
-    const {data} = await this.clientInstance.get<D>(requestDictionary[request], {method: 'GET'})
-    return data
+  public get: RequestBuilder = async request => {
+    return await this.clientInstance.get(requestDictionary[request], {method: 'GET'})
   }
 
-  public async post() {}
-  public async put() {}
-  public async delete() {}
+  public post: RequestBuilder = async request => {
+    return await this.clientInstance.get(requestDictionary[request], {method: 'POST'})
+  }
+
+  public put: RequestBuilder = async request => {
+    return await this.clientInstance.get(requestDictionary[request], {method: 'PUT'})
+  }
+
+  public delete: RequestBuilder = async request => {
+    return await this.clientInstance.get(requestDictionary[request], {method: 'DELETE'})
+  }
 }
 
 export const httpClient = new HttpClient()

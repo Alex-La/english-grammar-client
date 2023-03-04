@@ -18,7 +18,11 @@
     "baseUrl": "./src",
     "paths": {
       "~core": ["core"],
-      "~adapter": ["adapter"]
+      "~adapter": ["adapter"],
+      "~presenter": ["presenter"],
+      "#app": ["presenter/app"],
+      "#page": ["presenter/page"],
+      "#shared": ["presenter/shared"]
     }
   },
   "include": ["src", "index.d.ts"],
