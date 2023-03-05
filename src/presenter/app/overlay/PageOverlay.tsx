@@ -12,10 +12,10 @@ export const PageOverlay: React.FC = memo(() => (
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/">Тест</Link>
+            <Link to="/">Test</Link>
           </li>
           <li>
-            <Link to="/list">Список</Link>
+            <Link to="/list">List</Link>
           </li>
         </ul>
       </div>

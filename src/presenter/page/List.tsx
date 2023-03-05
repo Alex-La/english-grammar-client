@@ -14,6 +14,8 @@ export const List: React.FC = memo(() => {
 
   return (
     <div className="overflow-x-auto">
+      {true && <progress className="progress progress-primary w-full"></progress>}
+
       <table className="table w-full">
         <thead>
           <tr>
