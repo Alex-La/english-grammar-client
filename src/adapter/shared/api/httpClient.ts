@@ -8,7 +8,8 @@ class HttpClient {
   private readonly clientInstance = axios.create({baseURL: API_URL})
 
   public get: RequestBuilder = async request => {
-    return await this.clientInstance.get(requestDictionary[request], {method: 'GET'})
+    const {data} = await this.clientInstance.get(requestDictionary[request], {method: 'GET'})
+    return data
   }
 
   public post: RequestBuilder = async request => {

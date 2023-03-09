@@ -1,3 +1,4 @@
+import {usePendingPromise} from '#shared'
 import React, {memo, useEffect} from 'react'
 import {useStore} from 'zustand'
 
@@ -5,16 +6,15 @@ import {executeUseCase, getIrregularVerbsUseCase, irregularVerbsStore} from '~ad
 
 export const List: React.FC = memo(() => {
   const irregularVerbs = useStore(irregularVerbsStore, state => state.irregularVerbs)
-
-  console.log(irregularVerbs)
+  const {isPending, setPromise} = usePendingPromise()
 
   useEffect(() => {
-    executeUseCase(getIrregularVerbsUseCase)
-  }, [])
+    setPromise(executeUseCase(getIrregularVerbsUseCase))
+  }, [setPromise])
 
   return (
     <div className="overflow-x-auto">
-      {true && <progress className="progress progress-primary w-full"></progress>}
+      {isPending && <progress className="progress progress-primary w-full"></progress>}
 
       <table className="table w-full">
         <thead>
@@ -27,20 +27,15 @@ export const List: React.FC = memo(() => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>Быть</td>
-            <td>Be</td>
-            <td>Was/Were</td>
-            <td>Been</td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td>Начинать</td>
-            <td>Begin</td>
-            <td>Began</td>
-            <td>Begun</td>
-          </tr>
+          {irregularVerbs.map(({id, translation, v1, v2, v3}) => (
+            <tr key={`irr_verb_${id}`}>
+              <th>{id}</th>
+              <td>{translation}</td>
+              <td>{v1}</td>
+              <td>{v2}</td>
+              <td>{v3}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
