@@ -2,8 +2,8 @@ import React, {memo} from 'react'
 import {Link, Outlet} from 'react-router-dom'
 
 export const PageOverlay: React.FC = memo(() => (
-  <>
-    <div className="navbar bg-neutral text-neutral-content">
+  <div className="pt-16">
+    <div className="navbar bg-neutral text-neutral-content fixed top-0 z-20">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           English grammar
@@ -23,7 +23,7 @@ export const PageOverlay: React.FC = memo(() => (
     <div>
       <Outlet />
     </div>
-  </>
+  </div>
 ))
 
 PageOverlay.displayName = PageOverlay.name

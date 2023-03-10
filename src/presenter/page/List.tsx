@@ -1,4 +1,4 @@
-import {usePendingPromise} from '#shared'
+import {capitalizeFirstLetter, usePendingPromise} from '#shared'
 import React, {memo, useEffect} from 'react'
 import {useStore} from 'zustand'
 
@@ -30,10 +30,10 @@ export const List: React.FC = memo(() => {
           {irregularVerbs.map(({id, translation, v1, v2, v3}) => (
             <tr key={`irr_verb_${id}`}>
               <th>{id}</th>
-              <td>{translation}</td>
-              <td>{v1}</td>
-              <td>{v2}</td>
-              <td>{v3}</td>
+              <td>{capitalizeFirstLetter(translation)}</td>
+              <td>{capitalizeFirstLetter(v1)}</td>
+              <td>{v2.split('/').map(capitalizeFirstLetter).join(' / ')}</td>
+              <td>{capitalizeFirstLetter(v3)}</td>
             </tr>
           ))}
         </tbody>

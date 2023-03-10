@@ -1,4 +1,8 @@
 import {irregularVerbsStore} from 'adapter/service'
-import {GetIrregularVerbsUseCase} from '~core'
+import {GetIrregularVerbsUseCase, GetRandomIrregularVerbUseCase, GiveAnswerOnIrregularVerbUseCase} from '~core'
 
-export const getIrregularVerbsUseCase = new GetIrregularVerbsUseCase(irregularVerbsStore.getState())
+const verbsStore = irregularVerbsStore.getState()
+
+export const getIrregularVerbsUseCase = new GetIrregularVerbsUseCase(verbsStore)
+export const getRandomIrregularVerbUseCase = new GetRandomIrregularVerbUseCase(verbsStore)
+export const giveAnswerOnIrregularVerbUseCase = new GiveAnswerOnIrregularVerbUseCase(verbsStore)

@@ -8,20 +8,21 @@ class HttpClient {
   private readonly clientInstance = axios.create({baseURL: API_URL})
 
   public get: RequestBuilder = async request => {
-    const {data} = await this.clientInstance.get(requestDictionary[request], {method: 'GET'})
+    const {data} = await this.clientInstance.get(requestDictionary[request])
     return data
   }
 
-  public post: RequestBuilder = async request => {
-    return await this.clientInstance.get(requestDictionary[request], {method: 'POST'})
+  public post: RequestBuilder = async (request, variables) => {
+    const {data} = await this.clientInstance.post(requestDictionary[request], variables)
+    return data
   }
 
   public put: RequestBuilder = async request => {
-    return await this.clientInstance.get(requestDictionary[request], {method: 'PUT'})
+    return await this.clientInstance.put(requestDictionary[request])
   }
 
   public delete: RequestBuilder = async request => {
-    return await this.clientInstance.get(requestDictionary[request], {method: 'DELETE'})
+    return await this.clientInstance.delete(requestDictionary[request])
   }
 }
 
